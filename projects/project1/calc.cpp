@@ -46,6 +46,12 @@ int main() {
     else if (operation == '-'){
         summation -= atoi(operand.c_str());
     }
+
+    if (first_number){
+        // if there is only one number and no operations
+        // then the summation is just the number
+        summation = atoi(operand.c_str());
+    }
     // print out summation
     std::cout << summation << std::endl;
     return 0;
